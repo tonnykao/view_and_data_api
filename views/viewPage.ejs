@@ -1,0 +1,26 @@
+<!-- index.ejs -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="author" content="">
+
+  <!-- viewer files to include -->
+  <link type="text/css" rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.css"/>
+  <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.js"></script>
+  <script>
+    var getToken = function() {
+        return '<%= token %>';
+    };
+  </script>
+  <script src="/scripts/viewPage.js"></script>
+</head>
+
+<body onload="initialize(getToken)">
+
+<div id="viewer"></div>
+
+</body>
+</html>
